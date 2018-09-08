@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MatchTheMembers</string>
+    <string name="memberphoto">memberPhoto</string>
+    <string name="start_game">Start Game</string>
+    <string name="member_name">member_name</string>
+    <string name="score_text">Score: </string>
+</resources>

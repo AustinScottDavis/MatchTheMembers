@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="member_names">
+        <item>Aayush Tyagi</item>
+        <item>Abhinav Koppu</item>
+        <item>Aditya Yadav</item>
+        <item>Ajay Merchia</item>
+        <item>Alice Zhao</item>
+        <item>Amy Shen</item>
+        <item>Anand Chandra</item>
+        <item>Andres Medrano</item>
+        <item>Angela Dong</item>
+        <item>Anika Bagga</item>
+        <item>Anmol Parande</item>
+        <item>Austin Davis</item>
+        <item>Ayush Kumar</item>
+        <item>Brandon David</item>
+        <item>Candice Ye</item>
+        <item>Carol Wang</item>
+        <item>Cody Hsieh</item>
+        <item>Daniel Andrews</item>
+        <item>Daniel Jing</item>
+        <item>Eric Kong</item>
+        <item>Ethan Wong</item>
+        <item>Fang Shuo</item>
+        <item>Izzie Lau</item>
+        <item>Jaiveer Singh</item>
+        <item>Japjot Singh</item>
+        <item>Jeffery Zhang</item>
+        <item>Joey Hejna</item>
+        <item>Julie Deng</item>
+        <item>Justin Kim</item>
+        <item>Kaden Dippe</item>
+        <item>Kanyes Thaker</item>
+        <item>Kayli Jiang</item>
+        <item>Kiana Go</item>
+        <item>Leon Kwak</item>
+        <item>Levi Walsh</item>
+        <item>Louie Mcconnell</item>
+        <item>Max Miranda</item>
+        <item>Michelle Mao</item>
+        <item>Mohit Katyal</item>
+        <item>Mudabbir Khan</item>
+        <item>Natasha Wong</item>
+        <item>Nikhar Arora</item>
+        <item>Noah Pepper</item>
+        <item>Radhika Dhomse</item>
+        <item>Sai Yandapalli</item>
+        <item>Saman Virai</item>
+        <item>Sarah Tang</item>
+        <item>Sharie Wang</item>
+        <item>Shiv Kushwah</item>
+        <item>Shomil Jain</item>
+        <item>Shreya Reddy</item>
+        <item>Shubha Jagannatha</item>
+        <item>Shubham Gupta</item>
+        <item>Srujay Korlakunta</item>
+        <item>Stephen Jayakar</item>
+        <item>Suyash Gupta</item>
+        <item>Tiger Chen</item>
+        <item>Vaibhav Gattani</item>
+        <item>Victor Sun</item>
+        <item>Vidya Ravikumar</item>
+        <item>Vineeth Yeevani</item>
+        <item>Wilbur Shi</item>
+        <item>William Lu</item>
+        <item>Will Oakley</item>
+        <item>Xin Yi Chen</item>
+        <item>Young Lin</item>
+    </string-array>
+
+    <array name="pictures">
+        <item>@drawable/aayushtyagi</item>
+        <item>@drawable/abhinavkoppu</item>
+        <item>@drawable/adityayadav</item>
+        <item>@drawable/ajaymerchia</item>
+        <item>@drawable/alicezhao</item>
+        <item>@drawable/amyshen</item>
+        <item>@drawable/anandchandra</item>
+        <item>@drawable/andresmedrano</item>
+        <item>@drawable/angeladong</item>
+        <item>@drawable/anikabagga</item>
+        <item>@drawable/anmolparande</item>
+        <item>@drawable/austindavis</item>
+        <item>@drawable/ayushkumar</item>
+        <item>@drawable/brandondavid</item>
+        <item>@drawable/candiceye</item>
+        <item>@drawable/carolwang</item>
+        <item>@drawable/codyhsieh</item>
+        <item>@drawable/danielandrews</item>
+        <item>@drawable/danieljing</item>
+        <item>@drawable/erickong</item>
+        <item>@drawable/ethanwong</item>
+        <item>@drawable/fangshuo</item>
+        <item>@drawable/izzielau</item>
+        <item>@drawable/jaiveersingh</item>
+        <item>@drawable/japjotsingh</item>
+        <item>@drawable/jeffreyzhang</item>
+        <item>@drawable/joeyhejna</item>
+        <item>@drawable/juliedeng</item>
+        <item>@drawable/justinkim</item>
+        <item>@drawable/kadendippe</item>
+        <item>@drawable/kanyesthaker</item>
+        <item>@drawable/kaylijiang</item>
+        <item>@drawable/kianago</item>
+        <item>@drawable/leonkwak</item>
+        <item>@drawable/leviwalsh</item>
+        <item>@drawable/louiemcconnell</item>
+        <item>@drawable/maxmiranda</item>
+        <item>@drawable/michellemao</item>
+        <item>@drawable/mohitkatyal</item>
+        <item>@drawable/mudabbirkhan</item>
+        <item>@drawable/natashawong</item>
+        <item>@drawable/nikhararora</item>
+        <item>@drawable/noahpepper</item>
+        <item>@drawable/radhikadhomse</item>
+        <item>@drawable/saiyandapalli</item>
+        <item>@drawable/samanvirai</item>
+        <item>@drawable/sarahtang</item>
+        <item>@drawable/shariewang</item>
+        <item>@drawable/shivkushwah</item>
+        <item>@drawable/shomiljain</item>
+        <item>@drawable/shreyareddy</item>
+        <item>@drawable/shubhajagannatha</item>
+        <item>@drawable/shubhamgupta</item>
+        <item>@drawable/srujaykorlakunta</item>
+        <item>@drawable/stephenjayakar</item>
+        <item>@drawable/suyashgupta</item>
+        <item>@drawable/tigerchen</item>
+        <item>@drawable/vaibhavgattani</item>
+        <item>@drawable/victorsun</item>
+        <item>@drawable/vidyaravikumar</item>
+        <item>@drawable/vineethyeevani</item>
+        <item>@drawable/wilburshi</item>
+        <item>@drawable/williamlu</item>
+        <item>@drawable/willoakley</item>
+        <item>@drawable/xinyichen</item>
+        <item>@drawable/younglin</item>
+
+
+
+
+
+
+
+    </array>
+</resources>
