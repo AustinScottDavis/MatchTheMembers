@@ -45,8 +45,6 @@ public class GameActivity extends AppCompatActivity {
     int answerIndex;
     String sText;
     TypedArray pics;
-    TypedArray malePics;
-    TypedArray femalePics;
     Random rand;
     CountDownTimer timer;
     String currentName;
@@ -71,8 +69,6 @@ public class GameActivity extends AppCompatActivity {
         timeTextView = findViewById(R.id.timeText);
         sText = getResources().getString(R.string.score_text);
         pics = getResources().obtainTypedArray(R.array.pictures);
-        malePics = getResources().obtainTypedArray(R.array.pictures_male);
-        femalePics = getResources().obtainTypedArray(R.array.pictures_female);
         rand = new Random();
         updateScore();
         playGame();
