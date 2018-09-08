@@ -18,12 +18,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import static java.lang.System.in;
+
 public class GameActivity extends AppCompatActivity {
     String[] memberNames;
+    List<String> maleNames;
+    List<String> femaleNames;
     Button button1;
     Button button2;
     Button button3;
@@ -40,15 +45,20 @@ public class GameActivity extends AppCompatActivity {
     int answerIndex;
     String sText;
     TypedArray pics;
+    TypedArray malePics;
+    TypedArray femalePics;
     Random rand;
     CountDownTimer timer;
     String currentName;
+    int currentIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         memberNames = getResources().getStringArray(R.array.member_names);
+        femaleNames = Arrays.asList(getResources().getStringArray(R.array.member_names_female));
+        maleNames = Arrays.asList(getResources().getStringArray(R.array.member_names_male));
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
@@ -61,6 +71,8 @@ public class GameActivity extends AppCompatActivity {
         timeTextView = findViewById(R.id.timeText);
         sText = getResources().getString(R.string.score_text);
         pics = getResources().obtainTypedArray(R.array.pictures);
+        malePics = getResources().obtainTypedArray(R.array.pictures_male);
+        femalePics = getResources().obtainTypedArray(R.array.pictures_female);
         rand = new Random();
         updateScore();
         playGame();
@@ -74,6 +86,7 @@ public class GameActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
+                Toast.makeText(getApplicationContext(), "Time's up", Toast.LENGTH_SHORT).show();
                 playGame();
             }
         }.start();
@@ -163,26 +176,50 @@ public class GameActivity extends AppCompatActivity {
         currentOptions = new ArrayList<>();
         randomInt = rand.nextInt(pics.length());
         ID = pics.getResourceId(randomInt, 0);
-
         currentPicture.setImageResource(ID);
-        currentOptions.add(randomInt);
-        currentName = memberNames[randomInt];
-        int i = 0;
-        while (i < 3) {
-            currentRandomInt = rand.nextInt(pics.length());
-            if ((currentRandomInt != randomInt) && (!currentOptions.contains(currentRandomInt))) {
-                currentOptions.add(currentRandomInt);
-                i += 1;
+        if (maleNames.contains(memberNames[randomInt])) {
+            currentIndex = maleNames.indexOf(memberNames[randomInt]);
+            currentOptions.add(currentIndex);
+            currentName = maleNames.get(currentIndex);
+            int i = 0;
+            while (i < 3) {
+                currentRandomInt = rand.nextInt(maleNames.size());
+                if ((currentRandomInt != currentIndex) && (!currentOptions.contains(currentRandomInt))) {
+                    currentOptions.add(currentRandomInt);
+                    i += 1;
+                }
             }
-        }
-        Collections.shuffle(currentOptions);
-        button1.setText(memberNames[currentOptions.get(0)]);
-        button2.setText(memberNames[currentOptions.get(1)]);
-        button3.setText(memberNames[currentOptions.get(2)]);
-        button4.setText(memberNames[currentOptions.get(3)]);
-        for (int k = 0; k < 4; k += 1) {
-            if (currentOptions.get(k) == randomInt) {
-                answerIndex = k;
+            Collections.shuffle(currentOptions);
+            button1.setText(maleNames.get(currentOptions.get(0)));
+            button2.setText(maleNames.get(currentOptions.get(1)));
+            button3.setText(maleNames.get(currentOptions.get(2)));
+            button4.setText(maleNames.get(currentOptions.get(3)));
+            for (int k = 0; k < 4; k += 1) {
+                if (currentOptions.get(k) == currentIndex) {
+                    answerIndex = k;
+                }
+            }
+        } else {
+            currentIndex = femaleNames.indexOf(memberNames[randomInt]);
+            currentOptions.add(currentIndex);
+            currentName = femaleNames.get(currentIndex);
+            int i = 0;
+            while (i < 3) {
+                currentRandomInt = rand.nextInt(femaleNames.size());
+                if ((currentRandomInt != currentIndex) && (!currentOptions.contains(currentRandomInt))) {
+                    currentOptions.add(currentRandomInt);
+                    i += 1;
+                }
+            }
+            Collections.shuffle(currentOptions);
+            button1.setText(femaleNames.get(currentOptions.get(0)));
+            button2.setText(femaleNames.get(currentOptions.get(1)));
+            button3.setText(femaleNames.get(currentOptions.get(2)));
+            button4.setText(femaleNames.get(currentOptions.get(3)));
+            for (int k = 0; k < 4; k += 1) {
+                if (currentOptions.get(k) == currentIndex) {
+                    answerIndex = k;
+                }
             }
         }
     }
